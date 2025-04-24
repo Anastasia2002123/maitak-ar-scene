@@ -8,24 +8,31 @@
   </head>
   <body>
     <a-scene>
-      <!-- Небо -->
+      <!-- Фонове небо -->
       <a-sky color="#DDEEFF"></a-sky>
 
-      <!-- Текстура на коробці -->
+      <!-- Підключення ресурсів -->
       <a-assets>
         <img id="crate-texture" src="texture.jpg">
         <a-asset-item id="font" src="maitak-msdf.json"></a-asset-item>
         <a-asset-item id="trophy" src="trophy.glb"></a-asset-item>
       </a-assets>
 
-      <a-box src="#crate-texture" position="0 1 -3" rotation="0 45 0" width="1" height="1" depth="1"></a-box>
+      <!-- Куб з текстурою -->
+      <a-box src="#crate-texture" position="0 1 -3" rotation="0 45 0"
+             width="1" height="1" depth="1"></a-box>
 
-      <!-- Текст із шрифтом -->
-      <a-text value="Майтак Анастасія" font="#font" negate="false"
-              position="-1.5 2.5 -3" width="6" color="black"></a-text>
+      <!-- Текст з кириличним шрифтом -->
+      <a-text value="Майтак Анастасія"
+              font="#font"
+              negate="false"
+              color="black"
+              width="6"
+              position="-1.5 2.5 -3">
+      </a-text>
 
-      <!-- 3D модель - кубок -->
-      <a-entity gltf-model="#trophy" scale="0.5 0.5 0.5" position="2 0.3 -3"></a-entity>
+      <!-- 3D модель кубка -->
+      <a-entity gltf-model="#trophy" position="2 0.3 -3" scale="0.5 0.5 0.5"></a-entity>
     </a-scene>
   </body>
 </html>
